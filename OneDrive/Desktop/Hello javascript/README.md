@@ -1,6 +1,6 @@
-# hello-js
+# Levi's Portfolio
 
-A minimal JavaScript starter project.
+A professional portfolio website with interactive demos, ambient music, and atmospheric visual effects.
 
 ## Quick start
 

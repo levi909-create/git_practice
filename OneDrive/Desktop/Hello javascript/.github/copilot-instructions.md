@@ -1,4 +1,4 @@
-# AI Coding Agent Instructions for hello-js
+# AI Coding Agent Instructions for Levi's Portfolio
 
 This is a **personal portfolio website project** built with vanilla JavaScript, HTML5, and CSS3. It's a full-stack showcase combining professional greeting functionality with interactive demos and neon-themed UI.
 
