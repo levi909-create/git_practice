@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Levi's Professional Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div style="text-align: center; width: 100%;">
+        <p class="site-sub">Expertise, Skills & Experience</p>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section class="card" aria-labelledby="prof-title">
+        <h1 id="prof-title">Professional Background</h1>
+        <p class="lead">Full-stack web developer with a passion for clean code and user experience.</p>
+
+        <div class="profession-details">
+          <div class="skill-item">
+            <h3>Frontend Development</h3>
+            <p>HTML, CSS, JavaScript, React, responsive design, accessibility (WCAG), Web Animations API.</p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Backend Development</h3>
+            <p>Node.js, Express, databases (SQL & NoSQL), API design, authentication, testing.</p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Tools & Practices</h3>
+            <p>Git, VS Code, ESLint, Prettier, Mocha/Chai, CI/CD, agile methodologies.</p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Soft Skills</h3>
+            <p>Problem-solving, team collaboration, communication, mentoring, continuous learning.</p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <a href="index.html" class="btn-secondary">Back to Home</a>
+          <a href="about.html" class="btn-secondary">About Me</a>
+          <a href="contact.html" class="btn-secondary">Contact Me</a>
+
+          <label for="demoSelect" class="visually-hidden">Choose Demo</label>
+          <select id="demoSelect" aria-label="Choose interactive demo">
+            <option value="typewriter">Typewriter Demo</option>
+            <option value="color">Color Mixer</option>
+            <option value="memory">Memory Game</option>
+            <option value="particles">Particle Burst</option>
+          </select>
+
+          <button id="interactBtn" class="btn-primary">Run Demo</button>
+        </div>
+
+        <div id="demoOutput" class="output hidden" aria-live="polite"></div>
+      </section>
+
+      <footer class="card muted">
+        <small> - ©copyright 2025 Levi's Professional Website. -</small>
+      </footer>
+    </main>
+
+    <div id="frogContainer" class="frog-container"></div>
+
+    <script src="js/profession.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
+</html>

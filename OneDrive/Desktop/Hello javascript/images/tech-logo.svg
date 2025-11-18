@@ -1,0 +1,105 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#daa520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="6" result="coloredBlur2"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur2"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main hexagonal shape -->
+  <g transform="translate(40, 40)">
+    <!-- Outer hexagon -->
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" 
+             stroke="url(#neonGradient)" 
+             stroke-width="2.5" 
+             fill="none" 
+             filter="url(#glow)"
+             opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="2s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Middle hexagon -->
+    <polygon points="0,-20 17,-10 17,10 0,20 -17,10 -17,-10" 
+             stroke="url(#neonGradient)" 
+             stroke-width="2" 
+             fill="rgba(0,245,255,0.05)" 
+             filter="url(#glow)"
+             opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Inner hexagon -->
+    <polygon points="0,-10 9,-5 9,5 0,10 -9,5 -9,-5" 
+             stroke="url(#neonGradient)" 
+             stroke-width="1.5" 
+             fill="rgba(38,179,13,0.08)" 
+             filter="url(#glow)"
+             opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <!-- Central core -->
+    <circle cx="0" cy="0" r="5" fill="#daa520" filter="url(#glow)">
+      <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Orbiting particles -->
+    <circle r="2.5" fill="#ffd700" filter="url(#glow)" opacity="0.6">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M 0,-20 A 20,20 0 1,1 -0.1,-20 Z"/>
+    </circle>
+    <circle r="2.5" fill="#daa520" filter="url(#glow)" opacity="0.6">
+      <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M 0,-20 A 20,20 0 1,1 -0.1,-20 Z"/>
+    </circle>
+    <circle r="2.5" fill="#b8860b" filter="url(#glow)" opacity="0.6">
+      <animateMotion dur="3s" repeatCount="indefinite" begin="2s" path="M 0,-20 A 20,20 0 1,1 -0.1,-20 Z"/>
+    </circle>
+    
+    <!-- Connection lines to corners -->
+    <line x1="0" y1="-30" x2="0" y2="-10" stroke="#daa520" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="30" x2="0" y2="10" stroke="#ffd700" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="-26" y1="-15" x2="-9" y2="-5" stroke="#b8860b" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="26" y1="15" x2="9" y2="5" stroke="#daa520" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Data points at corners -->
+    <circle cx="0" cy="-30" r="2" fill="#ffd700" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.3;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="26" cy="-15" r="2" fill="#daa520" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="26" cy="15" r="2" fill="#b8860b" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.3;0.5" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="30" r="2" fill="#ffd700" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="1.5s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-26" cy="15" r="2" fill="#daa520" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.3;0.5" dur="1.5s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-26" cy="-15" r="2" fill="#b8860b" filter="url(#glow)" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="1.5s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

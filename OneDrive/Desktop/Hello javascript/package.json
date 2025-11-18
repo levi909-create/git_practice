@@ -1,0 +1,18 @@
+{
+  "name": "hello-js",
+  "version": "1.0.0",
+  "description": "Hello JavaScript starter project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "eslint": "^8.57.1",
+    "mocha": "^10.8.2",
+    "prettier": "^3.6.2"
+  }
+}

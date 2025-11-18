@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Levi's Professional Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <img src="images/tech-logo.svg" alt="Tech Logo" class="site-logo" />
+    </header>
+
+    <main class="container" role="main">
+      <section class="card" aria-labelledby="greet-title">
+        <h1 id="greet-title" class="hop-in">Welcome</h1>
+        <p class="lead">Tell Me Your Name And I'll Greet You Professionally.</p>
+
+        <div class="form-row">
+          <label for="name" class="visually-hidden">Your name</label>
+          <input id="name" type="text" placeholder="e.g. Jane Doe" aria-label="Your name" />
+          <button id="greetBtn" class="btn-primary">Greet</button>
+        </div>
+
+        <div id="output" class="output" aria-live="polite"></div>
+
+        <div class="button-row">
+          <a href="about.html" class="btn-secondary">About Me</a>
+          <a href="profession.html" class="btn-secondary">Learn About My Profession</a>
+          <a href="contact.html" class="btn-secondary">Contact Me</a>
+        </div>
+      </section>
+
+      <footer class="card muted">
+        <small> - ©copyright 2025 Levi's Professional Website. -</small>
+      </footer>
+    </main>
+
+    <div id="frogContainer" class="frog-container"></div>
+    
+    <div class="moon"></div>
+    
+    <div class="stars-container">
+      <div class="star" style="--delay: 0s; --duration: 15s; --top: 10%;">✦</div>
+      <div class="star" style="--delay: 2s; --duration: 18s; --top: 25%;">✦</div>
+      <div class="star" style="--delay: 4s; --duration: 20s; --top: 40%;">✦</div>
+      <div class="star" style="--delay: 1s; --duration: 17s; --top: 55%;">✦</div>
+      <div class="star" style="--delay: 3s; --duration: 19s; --top: 70%;">✦</div>
+      <div class="star" style="--delay: 5s; --duration: 16s; --top: 15%;">✦</div>
+      <div class="star" style="--delay: 6s; --duration: 21s; --top: 30%;">✦</div>
+      <div class="star" style="--delay: 2.5s; --duration: 18s; --top: 50%;">✦</div>
+      <div class="star" style="--delay: 4.5s; --duration: 19s; --top: 65%;">✦</div>
+      <div class="star" style="--delay: 1.5s; --duration: 17s; --top: 80%;">✦</div>
+    </div>
+    
+    <div class="fog-container">
+      <div class="fog fog-layer-1"></div>
+      <div class="fog fog-layer-2"></div>
+      <div class="fog fog-layer-3"></div>
+    </div>
+    
+    <div class="rain-container">
+      <div class="raindrop" style="left:8%; animation-delay:0s; animation-duration:0.9s;"></div>
+      <div class="raindrop" style="left:22%; animation-delay:0.4s; animation-duration:0.85s;"></div>
+      <div class="raindrop" style="left:38%; animation-delay:0.2s; animation-duration:0.95s;"></div>
+      <div class="raindrop" style="left:52%; animation-delay:0.6s; animation-duration:0.88s;"></div>
+      <div class="raindrop" style="left:68%; animation-delay:0.3s; animation-duration:0.92s;"></div>
+      <div class="raindrop" style="left:82%; animation-delay:0.7s; animation-duration:0.87s;"></div>
+      <div class="raindrop" style="left:15%; animation-delay:0.5s; animation-duration:0.9s;"></div>
+      <div class="raindrop" style="left:45%; animation-delay:0.1s; animation-duration:0.86s;"></div>
+      <div class="raindrop" style="left:75%; animation-delay:0.8s; animation-duration:0.91s;"></div>
+      <div class="raindrop" style="left:92%; animation-delay:0.35s; animation-duration:0.89s;"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/music.js"></script>
+  </body>
+</html>
